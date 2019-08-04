@@ -13,8 +13,8 @@ body {
 
 html {
   font-family: $font;
-  font-size: 16px;
-  line-height: 1.38;
+  font-size: 15px;
+  line-height: 1.4;
   color: $text;
 }
 
@@ -31,44 +31,13 @@ h4,
 h5,
 h6,
 p {
-  font-weight: 400;
-  margin: 0 0 10px 0;
-}
-
-h1 {
-  font-family: $font-bold;
-  font-size: 36px;
-}
-
-h2 {
-  font-family: $font-bold;
-  font-size: 32px;
-}
-
-h3 {
-  font-family: $font-bold;
-  font-size: 28px;
-}
-
-h4 {
-  font-family: $font-bold;
-  font-size: 24px;
-}
-
-h5 {
-  font-family: $font-bold;
-  font-size: 22px;
-}
-
-h6 {
-  font-family: $font-bold;
-  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-  font-size: 16px;
   strong {
-    font-family: $font-bold;
+    font-weight: 500;
   }
 }
 
@@ -77,7 +46,6 @@ a {
   color: $highlight;
   &:hover {
     text-decoration: none;
-    color: $highlight-hov;
   }
 }
 
@@ -158,9 +126,9 @@ ol > *:not(li) {
 
 //изменяем цвет выделения текста мышью
 ::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
+  color: #fff;
+  background-color: $brand;
+  text-shadow: none;
 }
 
 .main-wrap {
@@ -168,10 +136,10 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -186,30 +154,82 @@ ol > *:not(li) {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 0 40px;
 
   @include max(768) {
     padding: 10px 20px;
   }
-
   @include max(425) {
     padding: 10px;
   }
 }
 
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none;
-}
+.btn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  min-width: 207px;
+  height: 40px;
+  padding: 0 26px;
+  cursor: pointer;
+  transition: .5s;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #87b365;
+  border-radius: 20px !important;
+  background-color: #87b365;
 
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-color: #87b365;
+  }
 
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
+  &:after {
+    position: absolute;
+    z-index: 1;
+    right: -15%;
+    bottom: 0;
+    left: auto;
+    width: 0;
+    height: 100%;
+    content: '';
+    transition: .5s;
+    transform: skewX(25deg);
+    background-color: #fff;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #87b365;
+    &:after {
+      left: -25%;
+      width: 135%;
+      transition: .5s;
+      transform: skewX(25deg);
+    }
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+  }
 }
