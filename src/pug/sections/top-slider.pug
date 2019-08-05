@@ -1,0 +1,21 @@
+mixin top-slider__slide(title, pic)
+  //begin top-slider__slide
+  div(class='top-slider__slide' style='background-image:url("assets/img/bg-top-slider-' + pic + '.png")')
+    .container
+      .top-slider__info
+        .top-slider__subtitle Лечитесь сегодня -
+        .top-slider__title #{title}
+        .top-slider__text
+          span
+            |Программа рассрочки,
+            br
+            |доступная каждому.
+        a(href="#").btn
+          span Подробнее
+  //end top-slider__slide
+
+//begin top-slider
+.top-slider#top-slider
+  +top-slider__slide('Платите потом!', '01')
+  +top-slider__slide('Платите позже!', '02')
+//end top-slider
