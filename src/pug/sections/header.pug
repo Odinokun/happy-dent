@@ -1,4 +1,53 @@
 // begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
+header.header
+  .container
+    a(href="#").header-logo
+      img(src="assets/img/logo.png" alt="picture")
+    //begin header-row-wrap
+    .header-row-wrap
+      //begin header-row
+      .header-row
+        //begin header-contacts
+        .header-contacts
+          .header-contacts__item
+            h3.header-contacts__name ООО "Хэппи Дент"
+            a(href="tel:+88126271302").header-contacts__phone 8 (812) 627-13-02
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-contacts__adress г. Колпино, пр. Ленина, 75 лит.А
+          .header-contacts__item
+            h3.header-contacts__name ООО "Этна Дент"
+            a(href="tel:+88126271856").header-contacts__phone 8 (812) 627-18-56
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-contacts__adress г. Колпино, ул. Онежская д.1
+        //end header-contacts
+  
+        //begin header-socials
+        .header-socials
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-social.header-social--inst
+            +svg('inst')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-social.header-social--vk
+            +svg('vk')
+        //end header-socials
+  
+        a(href="#").btn.header-btn
+          +svg('office-form')
+          span Запись на прием
+      //end header-row
+        
+      //begin header-menu
+      nav.header-menu.menu#menu
+        ul.menu__list
+          li.menu__item
+            a(href="#").menu__link.active Главная
+          li.menu__item
+            a(href="#").menu__link Акции
+          li.menu__item
+            a(href="#").menu__link Услуги
+          li.menu__item
+            a(href="#").menu__link О клинике
+          li.menu__item
+            a(href="#").menu__link Отзывы
+          li.menu__item
+            a(href="#").menu__link Контакты
+      //end header-menu
+
+    //end header-row-wrap
 // end header
