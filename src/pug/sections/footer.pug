@@ -1,4 +1,95 @@
-//begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
-//end footer
+// begin footer
+footer.footer#footer
+  //begin footer-open-btn
+  .footer-open-btn
+  //end footer-open-btn
+
+  //begin footer-top
+  .footer-top
+    .container
+      //begin footer-item__logo
+      .footer-item__logo
+        a(href="#").footer-logo
+          img(src="assets/img/logo.png" alt="picture")
+      //end footer-item__logo
+
+      //begin footer-menu
+      .footer-menu
+        //begin footer-menu__item
+        .footer-menu__item
+          h3.footer-menu__title Услуги
+          ul.footer-menu__list
+            li
+              a(href="#").footer-menu__link Терапия
+            li
+              a(href="#").footer-menu__link Хирургия
+            li
+              a(href="#").footer-menu__link Протезирование
+            li
+              a(href="#").footer-menu__link Имплантация
+            li
+              a(href="#").footer-menu__link Брекеты
+            li
+              a(href="#").footer-menu__link Чистка зубов
+        //end footer-menu__item
+
+        //begin footer-menu__item
+        .footer-menu__item
+          h3.footer-menu__title Клиника
+          ul.footer-menu__list
+            li
+              a(href="#").footer-menu__link О клинике
+            li
+              a(href="#").footer-menu__link Специалисты
+            li
+              a(href="#").footer-menu__link Гарантии
+            li
+              a(href="#").footer-menu__link Налоговый вычет
+            li
+              a(href="#").footer-menu__link Галерея
+        //end footer-menu__item
+
+        //begin footer-menu__item
+        .footer-menu__item
+          h3.footer-menu__title Информация
+          ul.footer-menu__list
+            li
+              a(href="#").footer-menu__link Новости клиники
+            li
+              a(href="#").footer-menu__link Блог
+        //end footer-menu__item
+      //end footer-menu
+
+      //begin footer-item__contacts
+      .footer-item__contacts
+        span.footer-item__contacts-title Адреса клиник
+
+        //begin footer-socials
+        .footer-socials
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-social.footer-social--inst
+            +svg('inst')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-social.footer-social--vk
+            +svg('vk')
+        //end footer-socials
+
+        //begin footer-contacts
+        .footer-contacts
+          .footer-contacts__item
+            h3.footer-contacts__name ООО "Хэппи Дент"
+            a(href="tel:+88126271302").footer-contacts__phone 8 (812) 627-13-02
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-contacts__adress г. Колпино, пр. Ленина, 75 лит.А
+          .footer-contacts__item
+            h3.footer-contacts__name ООО "Этна Дент"
+            a(href="tel:+88126271856").footer-contacts__phone 8 (812) 627-18-56
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-contacts__adress г. Колпино, ул. Онежская д.1
+        //end footer-contacts
+      //end footer-item__contacts
+  //end footer-top
+
+  //begin footer-bottom
+  .footer-bottom
+    .container
+      span.footer-copyright &#169; 2019 Стоматологическая клиника «Этна Дент» Все права защищены
+  //end footer-bottom
+
+// end footer

@@ -6,6 +6,9 @@ $(function() {
   // begin Slick slider
   require('./modules/slick')();
 
+  // begin bottom menu
+  require('./modules/bottomMenu')();
+
   // begin Popup
   // require('./modules/popup')();
 
