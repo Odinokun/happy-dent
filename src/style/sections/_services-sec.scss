@@ -1,7 +1,8 @@
-.services-sec{
+.services-sec {
   padding-top: 50px;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 }
+
 .services-sec__list {
   display: flex;
   justify-content: space-around;
@@ -15,12 +16,15 @@
   align-items: center;
   width: 25%;
   transition: transform .5s;
+
   @include max(910) {
     width: 33.33%;
   }
+
   @include max(600) {
     width: 50%;
   }
+
   @include max(375) {
     width: 100%;
   }
@@ -90,8 +94,8 @@
 }
 
 .services-sec__card-title {
+  font-family: $font-m;
   font-size: 17px;
-    font-family:$font-m;
   position: relative;
   z-index: 1;
   margin-bottom: 0;

@@ -9,6 +9,12 @@ $(function() {
   // begin bottom menu
   require('./modules/bottomMenu')();
 
+  // begin phone mask
+  require('./modules/maskedinput')();
+
+  // begin jquery ui
+  require('./modules/jquery-ui')();
+
   // begin Popup
   // require('./modules/popup')();
 

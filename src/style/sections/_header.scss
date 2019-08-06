@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
   @include max(1020) {
     position: fixed;
@@ -10,6 +10,7 @@
     width: 100%;
     background-color: #434978;
   }
+
   .container {
     display: flex;
     padding-top: 20px;
@@ -37,6 +38,7 @@
     margin-right: 20px;
     margin-left: 0;
   }
+
   @include max(1020) {
     width: 40px;
     height: 40px;
@@ -77,6 +79,7 @@
     justify-content: flex-start;
     padding-right: 0;
   }
+
   @include max(1020) {
     display: none;
   }
@@ -85,6 +88,7 @@
 .header-contacts__item {
   display: flex;
   flex-direction: column;
+
   //width: 250px;
   //margin-right: 70px;
   padding-top: 3px;
@@ -92,7 +96,6 @@
   @include max(1180) {
     padding-right: 20px;
   }
-
   &:last-child {
     //margin-right: 0;
   }
