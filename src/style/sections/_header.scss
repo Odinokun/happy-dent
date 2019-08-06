@@ -2,8 +2,8 @@
   @include max(1020) {
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     width: 100%;
     background-color: #434978;
   }
@@ -34,11 +34,13 @@
     margin-right: 20px;
     margin-left: 0;
   }
+
   @include max(1020) {
     width: 40px;
     height: 40px;
     margin: 0;
   }
+
   img {
     display: block;
     width: 100%;
@@ -73,6 +75,7 @@
     justify-content: flex-start;
     padding-right: 0;
   }
+
   @include max(1020) {
     display: none;
   }
@@ -81,6 +84,7 @@
 .header-contacts__item {
   display: flex;
   flex-direction: column;
+
   //width: 250px;
   //margin-right: 70px;
   padding-top: 3px;
@@ -95,13 +99,13 @@
 
 .header-contacts__name {
   font-size: 13px;
-  font-weight: 700;
+  font-family:$font-b;
   color: #7476a8;
 }
 
 .header-contacts__phone {
   font-size: 19px;
-  font-weight: 700;
+  font-family:$font-b;
   display: inline-block;
   margin-bottom: 3px;
   text-decoration: none;
@@ -158,6 +162,7 @@
   @include max(1180) {
     margin-right: 0;
   }
+
   svg {
     flex: none;
     fill: #fff;
