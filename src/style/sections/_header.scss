@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+  z-index: 1;
+
   @include max(1020) {
     position: fixed;
     top: 0;
@@ -34,7 +37,6 @@
     margin-right: 20px;
     margin-left: 0;
   }
-
   @include max(1020) {
     width: 40px;
     height: 40px;
@@ -75,7 +77,6 @@
     justify-content: flex-start;
     padding-right: 0;
   }
-
   @include max(1020) {
     display: none;
   }
@@ -84,7 +85,6 @@
 .header-contacts__item {
   display: flex;
   flex-direction: column;
-
   //width: 250px;
   //margin-right: 70px;
   padding-top: 3px;
@@ -92,20 +92,21 @@
   @include max(1180) {
     padding-right: 20px;
   }
+
   &:last-child {
     //margin-right: 0;
   }
 }
 
 .header-contacts__name {
+  font-family: $font-b;
   font-size: 13px;
-  font-family:$font-b;
   color: #7476a8;
 }
 
 .header-contacts__phone {
+  font-family: $font-b;
   font-size: 19px;
-  font-family:$font-b;
   display: inline-block;
   margin-bottom: 3px;
   text-decoration: none;
