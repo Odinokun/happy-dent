@@ -1,0 +1,29 @@
+mixin services-sec__item(title, icon)
+  .services-sec__item
+    .services-sec__icon
+      img(src="assets/img/icon-service-" + icon + ".svg" alt="picture")
+    .services-sec__card-title-wrap
+      h3.services-sec__card-title #{title}
+      .services-sec__card
+        ul.services-sec__card-list
+          li.services-sec__card-item
+            a(href="#").services-sec__card-link Лечение кариеса
+          li.services-sec__card-item
+            a(href="#").services-sec__card-link Лечение пульпита
+          li.services-sec__card-item
+            a(href="#").services-sec__card-link Удаление зубов
+
+//begin services-sec
+.services-sec
+  .container
+    h2.section-title Стоматологические услуги
+    .services-sec__list
+      +services-sec__item('Лечение кариеса', '01')
+      +services-sec__item('Лечение кариеса две строки', '02')
+      +services-sec__item('Лечение кариеса', '03')
+      +services-sec__item('Лечение кариеса', '04')
+      +services-sec__item('Лечение кариеса', '05')
+      +services-sec__item('Лечение кариеса', '06')
+      +services-sec__item('Лечение кариеса', '07')
+      +services-sec__item('Лечение кариеса', '08')
+//end services-sec
