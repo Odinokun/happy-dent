@@ -29,15 +29,17 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
+  font-family: $font-b;
   margin: 0;
   padding: 0;
 }
 
 p {
+  margin: 0;
+  padding: 0;
   strong {
-    font-weight: 500;
+    font-family: $font-m;
   }
 }
 
@@ -236,4 +238,12 @@ ol > *:not(li) {
     z-index: 2;
     white-space: nowrap;
   }
+}
+
+.section-title {
+  font-family: $font-b;
+  font-size: 36px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #2f3150;
 }
