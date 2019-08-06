@@ -1,0 +1,46 @@
+//begin appointment
+.appointment
+  .container
+    h2.section-title Запись на прием
+    .appointment-inn
+      .appointment-form-wrap
+        // begin appointment-form
+        form.appointment-form
+          .appointment-form__row.appointment-form__row--inputs
+            input.appointment-form__input(placeholder='Ваше имя')
+            input.appointment-form__input.phone-mask(placeholder="+7(___)___-__-__")
+          .appointment-form__row
+            select.appointment-form__select.select
+              option(value='г. Колпино, ул. Ленина, 75 лит.А') г. Колпино, ул. Ленина, 75 лит.А
+              option(value='г. Колпино, ул. Ленина, 75 лит.А') г. Колпино, ул. Ленина, 75 лит.А
+              option(value='г. Колпино, ул. Ленина, 75 лит.А') г. Колпино, ул. Ленина, 75 лит.А
+          .appointment-form__row
+            select.appointment-form__select.select
+              option(value='Иван Шурховецкий, врач-терапевт') Иван Шурховецкий, врач-терапевт
+              option(value='Иван Шурховецкий, врач-протезист') Иван Шурховецкий, врач-протезист
+              option(value='Иван Шурховецкий, врач-дантист') Иван Шурховецкий, врач-дантист
+          .appointment-form__row.appointment-form__row--times
+            input(placeholder='Выберите дату').appointment-form__datapicker
+            select.appointment-form__select.select
+              option(value='Выберите время') Выберите время
+              option(value='10:00') 10:00
+              option(value='11:00') 11:00
+              option(value='12:00') 12:00
+              option(value='13:00') 13:00
+              option(value='14:00') 14:00
+              option(value='15:00') 15:00
+          .appointment-form__row
+            label.appointment-form__agree
+              input(type='checkbox' checked)
+              span.appointment-form__agree-checkbox
+              span.appointment-form__agree-text
+                |Я соглашаюсь с условиями обработки персональных данных и
+                =' '
+                a(href="#") политикой конфиденциальности
+          .appointment-form__row
+            .btn
+              input(type="submit" value='Button')
+              +svg('office-form')
+              span Записаться
+        // end appointment-form
+//end appointment

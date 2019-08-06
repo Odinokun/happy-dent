@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  z-index: 10;
 
   @include max(910) {
     position: fixed;
@@ -66,6 +67,7 @@
   @include max(1180) {
     width: auto;
   }
+
   @include max(910) {
     display: none;
   }
@@ -96,6 +98,7 @@
   @include max(1020) {
     padding-left: 25px;
   }
+
   @include max(910) {
     display: none;
   }

@@ -6,6 +6,7 @@
     @include max(1180) {
       left: 20px;
     }
+
     @include max(425) {
       left: 10px;
     }
@@ -17,6 +18,7 @@
     @include max(1180) {
       right: 20px;
     }
+
     @include max(425) {
       right: 10px;
     }
@@ -91,6 +93,10 @@
   @include max(600) {
     font-size: 24px;
   }
+
+  @include max(425) {
+    font-size: 22px;
+  }
 }
 
 .top-slider__title {
@@ -103,6 +109,10 @@
   @include max(600) {
     font-size: 30px;
   }
+
+  @include max(425) {
+    font-size: 26px;
+  }
 }
 
 .top-slider__text {
@@ -114,5 +124,9 @@
 
   @include max(600) {
     font-size: 18px;
+  }
+
+  @include max(425) {
+    font-size: 16px;
   }
 }
