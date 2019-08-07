@@ -1,0 +1,135 @@
+.team {
+  padding-top: 50px;
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+.team-slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto -110px auto;
+
+  @include max(910) {
+    max-width: 750px;
+  }
+  .slick-next,
+  .slick-prev {
+    z-index: 1;
+    top: 60px;
+    transform: translate(0);
+  }
+  .slick-next {
+    right: 10px;
+
+    @include max(910) {
+      right: -5px;
+    }
+  }
+  .slick-prev {
+    left: 10px;
+
+    @include max(910) {
+      left: -5px;
+    }
+  }
+}
+
+//begin center slide
+.team-slide.slick-current + .team-slide.slick-active {
+  .team-slide__ava {
+    border-color: #7476a8;
+  }
+  .team-slide__info {
+    background-color: #f5f5fa;
+    box-shadow: 0 8px 20px rgba(67, 73, 120, .14);
+  }
+  .team-slide__descr {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+//end center slide
+
+.team-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-slide__ava {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 157px;
+  height: 157px;
+  margin: 0 auto 25px auto;
+  transition: border-color .5s;
+  border: 4px solid transparent;
+  border-radius: 50%;
+
+  @include max(910) {
+    border-color: #7476a8;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.team-slide__info {
+  width: 100%;
+  max-width: 287px;
+  padding: 117px 13px 10px 13px;
+  transition: .5s;
+  transform: translateY(-110px);
+  pointer-events: none;
+  border-radius: 16px;
+  background-color: transparent;
+  box-shadow: 0 0 0 rgba(67, 73, 120, .14);
+
+  @include max(910) {
+    background-color: #f5f5fa;
+    box-shadow: 0 8px 20px rgba(67, 73, 120, .14);
+  }
+}
+
+.team-slide__title {
+  font-family: $font-b;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 13px;
+  text-align: center;
+  pointer-events: auto;
+  color: #272727;
+}
+
+.team-slide__position {
+  font-family: $font-m;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  pointer-events: auto;
+  color: #272727;
+}
+
+.team-slide__descr {
+  margin-bottom: 20px;
+  transition: opacity .5s;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+
+  @include max(910) {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  span {
+    font-size: 12px;
+    line-height: 20px;
+    color: #272727;
+  }
+}
