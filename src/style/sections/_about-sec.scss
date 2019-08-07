@@ -1,6 +1,6 @@
 .about-sec {
   padding-top: 55px;
-  padding-bottom: 35px;
+  padding-bottom: 65px;
 }
 
 .about-sec__inn {
@@ -15,6 +15,7 @@
     margin-right: 0;
     margin-left: 0;
   }
+
   &::before {
     position: absolute;
     top: 0;
@@ -33,10 +34,12 @@
       height: 500px;
       transform: translate(90px, -95px);
     }
+
     @include max(910) {
       right: 50%;
       transform: translate(50%, -95px);
     }
+
     @include max(600) {
       display: none;
     }
@@ -50,6 +53,7 @@
   @include max(1020) {
     padding-right: 20px;
   }
+
   p {
     margin: 22px 0;
   }
@@ -95,6 +99,7 @@
     width: 270px;
     height: 270px;
   }
+
   img {
     display: block;
     width: 100%;
