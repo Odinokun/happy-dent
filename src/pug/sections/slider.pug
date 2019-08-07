@@ -1,0 +1,25 @@
+mixin slide(className, title, pic, bg)
+  //begin slide
+  div(class="slide slide--" + className)
+    div(style='background-image:url(assets/img/bg-slide-' + bg + '.jpg)' class="slide-bg")
+    .container
+      .slide__img
+        img(src="assets/img/slide-pic-" + pic + ".png" alt="picture")
+      .slide__info
+        h3.slide__subtitle Лечитесь сегодня -
+        h2.slide__title #{title}
+        .slide__text
+          span
+            | Программа рассрочки,
+            br
+            | доступная каждому.
+        a(href="#").slide__link Подробнее
+  //end slide
+
+//begin slider
+.slider#slider
+  +slide('left',  'Платите потом!', '01', '01')
+  +slide('right', 'Платите позже!', '03', '02')
+  +slide('left',  'Платите потом!', '02', '01')
+  +slide('right', 'Платите позже!', '03', '02')
+//end slider

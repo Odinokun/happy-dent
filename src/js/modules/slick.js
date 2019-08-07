@@ -11,6 +11,17 @@ module.exports = function() {
     cssEase: 'linear'
   });
 
+  $('#slider').slick({
+    dots: true,
+    arrows:false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed:5000,
+    cssEase: 'linear'
+  });
+
   // end Slick slider
 
 };
