@@ -1,0 +1,40 @@
+mixin news-sec__news-item()
+  .news-sec__news-item
+    .news-sec__news-pic
+      img(src="assets/img/news-01.jpg" alt="picture")
+    a(href="#").news-sec__news-title Закупка нового оборудования
+    span.news-sec__news-date 03.08.2019
+    p Своевременное обращение к врачу – залог не только здоровья зубов, но и существенной экономии
+
+mixin news-sec__blog-item
+  .news-sec__blog-item
+    a(href="#").news-sec__blog-title Закупка нового оборудования для нужд клиники
+    span.news-sec__blog-date 03.08.2019
+
+//begin news-sec
+.news-sec
+  .container
+    //begin news-sec__news
+    .news-sec__news
+      h2.section-title Новости клиники
+      .news-sec__news-body
+        +news-sec__news-item
+        +news-sec__news-item
+        +news-sec__news-item
+      .news-sec__news-all-link
+        +svg('newspaper')
+        span Все новости
+    //end news-sec__news
+
+    //begin news-sec__blog
+    .news-sec__blog
+      h2.section-title Блог
+      .news-sec__blog-body
+        +news-sec__blog-item
+        +news-sec__blog-item
+        +news-sec__blog-item
+      .news-sec__blog-all-link
+        +svg('blog')
+        span Весь блог
+    //end news-sec__blog
+//end news-sec
