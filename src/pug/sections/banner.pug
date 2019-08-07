@@ -1,0 +1,22 @@
+//begin banner-section
+.banner-section
+  .container
+    .banner
+      .banner__gift
+        img(src="assets/img/banner-gift.png" alt="picture")
+      h2.banner__title
+        | Запишитесь на консультацию
+        br
+        | прямо сейчас
+        br
+        | и получите
+        =" "
+        span скидку 10%!
+      form.banner__form
+        input.banner__input(placeholder='Ваше имя')
+        input.banner__input.phone-mask(placeholder="+7(___)___-__-__")
+        .btn.banner-btn
+          input(type="submit" value='Button')
+          +svg('office-form')
+          span Записаться
+//end banner-section
