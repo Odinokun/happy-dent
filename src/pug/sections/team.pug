@@ -1,0 +1,29 @@
+mixin team-slide(pic, name, surname, position)
+  //begin team-slide
+  .team-slide
+    .team-slide__ava
+      img(src="assets/img/team-ava-" + pic + ".jpg" alt="picture")
+    .team-slide__info
+      h3.team-slide__title
+        |#{name}
+        br
+        |#{surname}
+      h4.team-slide__position #{position}
+      .team-slide__descr
+        span Своевременное обращение к врачу – залог не только здоровья зубов, но и существенной экономии денежных средств. Своевременное обращение к врачу – залог не только здоровья зубов,.ущественной экономии денежных средств.
+  //end team-slide
+
+//begin team
+.team
+  .container
+    h2.section-title Наши специалисты
+    //begin team-slider
+    .team-slider#team-slider
+      +team-slide('01', 'Шурховецкий', 'Иван Викторович',      'врач стоматолог, ортопед, терапевт, хирург')
+      +team-slide('02', 'Курушкин',    'Андрей Андреевич',     'главный врач, имплантолог, ортопед')
+      +team-slide('03', 'Лебедев',     'Александр Михайлович', 'врач стоматолог')
+      +team-slide('04', 'Оперманас',   'Анна Сергеевна',       'врач-стоматолог, терапевт')
+      +team-slide('05', 'Филипова',    'Нина Юрьевна',         'главный врач, имплантолог, ортопед')
+      +team-slide('06', 'Знаюненко',   'Александра Игоревна',  'врач ортодонт')
+    //end team-slider
+//end team

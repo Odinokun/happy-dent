@@ -22,6 +22,32 @@ module.exports = function() {
     cssEase: 'linear'
   });
 
+  $('#team-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    arrows:true,
+    infinite: true,
+    speed: 500,
+    fade: false,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 911,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   // end Slick slider
 
 };
