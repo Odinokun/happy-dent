@@ -1,0 +1,35 @@
+mixin adresses-item__top(pic, adress, phoneLink, phone)
+  //begin adresses-item__top
+  .adresses-item__top
+    .adresses-item__pic
+      img(src="assets/img/adresses-" + pic + ".jpg" alt="picture")
+    .adresses-item__info
+      span.adresses-item__city г. Колпино,
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").adresses-item__adress #{adress}
+      a(href="tel:+" + phoneLink + "" class="adresses-item__phone").adresses-item__phone #{phone}
+      a(href="mailto:info@kolpinodent.ru").adresses-iten__mail info@kolpinodent.ru
+      a(href="#").btn.btn-blue.adresses-item__btn
+        +svg('office-form')
+        span Записаться
+  //end adresses-item__top
+
+//begin adresses
+.adresses
+  .container
+    h2.section-title Адреса клиник
+    //begin adresses-items
+    .adresses-items
+      //begin adresses-item
+      .adresses-item
+        +adresses-item__top('01', 'пр. Ленина, 75 лит.А', '88126271302', '8 (812) 627-13-02')
+        .adresses-item__map
+          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e41366b7026b5bdb6b1931bf58594a220001ed8cd9b035bc6aa43e88ca220b2&amp;source=constructor" frameborder="0")
+      //end adresses-item
+      //begin adresses-item
+      .adresses-item
+        +adresses-item__top('02', 'ул. Онежская д.1', '88126271856', '8 (812) 627-18-56')
+        .adresses-item__map
+          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A66388292c4da3f657cd7655ee67386b5b57be396e6ee52d371ffc899b7890a16&amp;source=constructor" frameborder="0")
+      //end adresses-item
+    //end adresses-items
+//end adresses

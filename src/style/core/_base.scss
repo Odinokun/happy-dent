@@ -139,6 +139,7 @@ ol > *:not(li) {
   height: 100%;
   min-height: 100vh;
   background-color: #fff;
+
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -153,6 +154,7 @@ ol > *:not(li) {
   @include max(1020) {
     padding-top: 52px;
   }
+
   @include max(910) {
     padding-bottom: 38px;
   }
@@ -236,7 +238,21 @@ ol > *:not(li) {
   svg {
     position: relative;
     z-index: 2;
+    fill: #fff;
     white-space: nowrap;
+  }
+}
+
+.btn-blue {
+  border-color: #454b7a;
+  &::before {
+    background-color: #454b7a;
+  }
+  &:hover {
+    border-color: #7476a8;
+  }
+  &::after {
+    background-color: #7476a8;
   }
 }
 
@@ -252,6 +268,7 @@ ol > *:not(li) {
   @include max(600) {
     font-size: 30px;
   }
+
   @include max(425) {
     font-size: 26px;
   }
