@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title       = 'Наши работы | Колпино Дент'
+  - var description = 'Наши работы | Колпино Дент'
+  - var ogtitle     = 'Наши работы | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Наши работы'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.contacts
+      include ../sections/page-title
+      include ../sections/top-slider
+      include ../sections/services-sec
+      include ../sections/appointment
+      include ../sections/about-sec
+      include ../sections/slider
+      include ../sections/team
+      include ../sections/news-sec
+      include ../sections/banner
+      include ../sections/adresses
+    //end content
+
+    include ../sections/footer
