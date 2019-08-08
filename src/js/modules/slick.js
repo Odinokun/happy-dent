@@ -53,7 +53,7 @@ module.exports = function() {
     infinite: true,
     speed: 500,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     cssEase: 'linear'
   });
 

@@ -2,30 +2,31 @@ module.exports = function() {
 
   // begin work-popup
   $('.work-popup-open').on('click', function() {
-    $('.work-popup, .popup__layer').fadeIn();
+    $('.work-popup').addClass('active');
+    $('.work-popup__layer').fadeIn();
     $('body').addClass('no-scroll');
+  });
+
+  $('.work-popup__layer, .work-popup__close').on('click', function() {
+    $('.work-popup').removeClass('active');
+    $('.work-popup__layer').fadeOut();
+    $('body').removeClass('no-scroll');
   });
   // end work-popup
 
-
-
-  // begin popup open
-  // $('.popup-open').on('click', function() {
-  //   $('.popup, .popup__layer').fadeIn();
+  // begin work-popup
+  // $('.work-popup-open').on('click', function() {
+  //   $('.work-popup, .popup__layer').fadeIn();
+  //   $('body').addClass('no-scroll');
   // });
-  // end popup open
+  // end work-popup
 
   // begin popup close
-  $('.popup__layer, .popup__close').on('click', function() {
-    $('.work-popup, .popup, .popup__layer').fadeOut();
-    $('body').removeClass('no-scroll');
-  });
+  // $('.popup__layer, .popup__close').on('click', function() {
+  //   $('.work-popup').removeClass('active');
+  //   $('.popup__layer').fadeOut();
+  //   $('body').removeClass('no-scroll');
+  // });
   // end popup close
-
-  // begin popup scroll
-  // $(window).on('scroll', function() {
-  //   $('.popup').css({'top': $(window).scrollTop() + 50});
-  // }).scroll();
-  // end popup scroll
 
 };

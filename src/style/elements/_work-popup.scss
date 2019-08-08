@@ -1,4 +1,4 @@
-.popup__layer {
+.work-popup__layer {
   position: fixed;
   z-index: 99;
   top: 0;
@@ -10,24 +10,35 @@
   background-color: #454b7a;
 }
 
-.popup {
+.work-popup {
   position: fixed;
   z-index: 100;
   top: 50%;
   left: 50%;
-  display: none;
+  display: block;
   overflow: auto;
   width: 92%;
   max-width: 800px;
   max-height: 96vh;
   padding: 30px 32px 20px 32px;
+  transition: opacity .5s;
   transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
   border-radius: $radius;
   background-color: #fff;
   box-shadow: 0 8px 20px rgba(47, 49, 80, .26);
+
+  @include max(910) {
+    max-width: 650px;
+  }
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
 }
 
-.popup__close {
+.work-popup__close {
   position: absolute;
   z-index: 1;
   top: 10px;
@@ -50,21 +61,6 @@
     fill: #fff;
     width: 8px;
     height: 8px;
-  }
-}
-
-.work-popup {
-  display: block;
-  transition: opacity .5s;
-  pointer-events: none;
-  opacity: 0;
-
-  @include max(910) {
-    max-width: 650px;
-  }
-  &.active {
-    pointer-events: auto;
-    opacity: 1;
   }
 }
 
