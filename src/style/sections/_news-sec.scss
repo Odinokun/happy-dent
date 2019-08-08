@@ -6,6 +6,7 @@
     @include max(1020) {
       flex-wrap: wrap;
     }
+
     @include max(767) {
       padding-top: 30px;
     }
@@ -43,9 +44,11 @@
   @include max(767) {
     width: calc(33.33% - 10px);
   }
+
   @include max(600) {
     width: 100%;
   }
+
   p {
     font-size: 14px;
     line-height: 20px;
@@ -61,12 +64,13 @@
   overflow: hidden;
   max-width: 256px;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: $radius;
 
   @include max(600) {
     margin-right: auto;
     margin-left: auto;
   }
+
   img {
     display: block;
     width: 100%;
@@ -86,6 +90,7 @@
   @include max(600) {
     text-align: center;
   }
+
   &:hover {
     color: #7476a8;
   }
@@ -111,6 +116,7 @@
   @include max(600) {
     justify-content: center;
   }
+
   svg {
     flex: none;
     fill: #474a79;
@@ -158,9 +164,11 @@
     width: calc(33.33% - 23px);
     margin-bottom: 30px;
   }
+
   @include max(767) {
     width: calc(33.33% - 10px);
   }
+
   @include max(600) {
     width: 100%;
   }
@@ -174,6 +182,7 @@
   @include max(600) {
     justify-content: center;
   }
+
   svg {
     fill: #474a79;
     width: 35px;

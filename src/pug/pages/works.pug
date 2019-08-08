@@ -1,0 +1,23 @@
+extends ../_template
+
+block variables
+  - var title       = 'Наши работы | Колпино Дент'
+  - var description = 'Наши работы | Колпино Дент'
+  - var ogtitle     = 'Наши работы | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Наши работы'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.works
+      include ../sections/page-title
+      include ../sections/works-gallery
+      include ../sections/slider
+      include ../sections/team
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

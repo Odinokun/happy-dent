@@ -16,12 +16,12 @@ $(function() {
   require('./modules/jquery-ui')();
 
   // begin Popup
-  // require('./modules/popup')();
+  require('./modules/popup')();
 
   // begin Animate.css
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
+  require('./modules/waypoints')();
+  require('./modules/animateCss')();
 
   // begin Fancybox3
   // require('./modules/fancybox')();

@@ -1,14 +1,24 @@
 module.exports = function() {
 
-  // begin popup open
-  $('.popup-open').on('click', function() {
-    $('.popup, .popup__layer').fadeIn();
+  // begin work-popup
+  $('.work-popup-open').on('click', function() {
+    $('.work-popup, .popup__layer').fadeIn();
+    $('body').addClass('no-scroll');
   });
+  // end work-popup
+
+
+
+  // begin popup open
+  // $('.popup-open').on('click', function() {
+  //   $('.popup, .popup__layer').fadeIn();
+  // });
   // end popup open
 
   // begin popup close
-  $('.popup__layer').on('click', function() {
-    $('.popup, .popup__layer').fadeOut();
+  $('.popup__layer, .popup__close').on('click', function() {
+    $('.work-popup, .popup, .popup__layer').fadeOut();
+    $('body').removeClass('no-scroll');
   });
   // end popup close
 

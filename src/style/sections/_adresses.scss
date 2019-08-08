@@ -42,10 +42,12 @@
   @include max(375) {
     margin-right: 10px;
   }
+
   @include max(425) {
     width: 100px;
     height: 100px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -123,7 +125,7 @@
   width: 100%;
   height: 270px;
   margin-bottom: 15px;
-  border-radius: 12px;
+  border-radius: $radius;
   background-color: #e8e8ed;
   iframe {
     display: block;
