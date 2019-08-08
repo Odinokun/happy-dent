@@ -13,7 +13,7 @@
   max-width: 798px;
   margin-right: 60px;
   padding: 43px 29px 40px 137px;
-  border-radius: 12px;
+  border-radius: $radius;
   background-color: #f5f5fa;
   box-shadow: 0 8px 26px rgba(94, 96, 152, .27);
 
@@ -38,6 +38,7 @@
   @include max(600) {
     display: none;
   }
+
   img {
     display: block;
   }
@@ -58,6 +59,7 @@
   @include max(600) {
     text-align: center;
   }
+
   span {
     font-size: 34px;
     text-transform: uppercase;

@@ -66,9 +66,11 @@
   @include max(910) {
     width: 40%;
   }
+
   @include max(600) {
     display: none;
   }
+
   img {
     display: block;
     max-width: 100%;
@@ -83,6 +85,7 @@
   @include max(910) {
     width: 60%;
   }
+
   @include max(600) {
     width: 100%;
     text-align: center;
@@ -100,6 +103,7 @@
   @include max(600) {
     font-size: 24px;
   }
+
   @include max(425) {
     font-size: 22px;
   }
@@ -117,6 +121,7 @@
   @include max(600) {
     font-size: 30px;
   }
+
   @include max(425) {
     font-size: 26px;
   }
@@ -133,6 +138,7 @@
   @include max(600) {
     font-size: 18px;
   }
+
   @include max(425) {
     font-size: 16px;
   }

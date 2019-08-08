@@ -1,0 +1,26 @@
+.works {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -110px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg.jpg');
+    background-position: 50% 0;
+  }
+  &::after {
+    position: absolute;
+    top: -165px;
+    right: 0;
+    width: 100%;
+    max-width: 1273px;
+    height: 804px;
+    content: '';
+    background-image: url('../img/bg-works.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

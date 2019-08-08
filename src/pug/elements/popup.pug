@@ -1,17 +1,34 @@
 //begin popup
 .popup__layer
-.popup
+
+//begin work-popup
+.popup.work-popup
   .popup__close
     +svg('close')
-  .popup__header
-    h2.popup__title Write Review
-  .popup__body
-    // begin schedule-item__form
-    form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
-          input(type='submit' value='send')
-    // begin schedule-item__form
+  .work-popup__body
+    //begin work-popup__slider
+    .work-popup__slider
+      .work-popup__slide
+        img(src="assets/img/work-popup-slide-01.jpg" alt="picture")
+      .work-popup__slide
+        img(src="assets/img/work-popup-slide-02.jpg" alt="picture")
+      .work-popup__slide
+        img(src="assets/img/work-popup-slide-03.jpg" alt="picture")
+    //end work-popup__slider
+
+    //begin work-popup__info
+    .work-popup__info
+      h3.work-popup__title Установка брекет-системы
+      p В современном мире огромное количество профессий и областей реализации человека! Живя в мегаполисе, на каждом углу встречаешь ту или иную услугу, массу предложений , которые просто убеждают тебя воспользоваться всем этим ! К сожалению, здесь количество не всегда означает качество, так как здесь более значимый аспект это тот, что определяет почему люди оказывающие какие-либо услуги этим занимаются? Любят ли они свое дело? Доставляет ли им их занятость радость и удовлетворение?
+      span.work-popup__whoes Процедуру проводил:
+      .work-popup__doc
+        .work-popup__doc-ava
+          img(src="assets/img/team-ava-02.jpg" alt="picture")
+        h4.work-popup__doc-name
+          | Курушкин
+          br
+          | Андрей Андреевич
+    //end work-popup__info
+//end work-popup
+
 //end popup

@@ -1,0 +1,22 @@
+mixin works-gallery__item(pic, title)
+  .works-gallery__item.work-popup-open
+    .works-gallery__pic
+      img(src="assets/img/works-gallery-" + pic + ".jpg" alt="picture")
+    h4.works-gallery__title #{title}
+
+//begin works-gallery
+.works-gallery
+  .container
+    .works-gallery__text
+      p В современном мире огромное количество профессий и областей реализации человека! Живя в мегаполисе, на каждом углу встречаешь ту или иную услугу, массу предложений , которые просто убеждают тебя воспользоваться всем этим ! К сожалению, здесь количество не всегда означает качество, так как здесь более значимый аспект это тот, что определяет почему люди оказывающие какие-либо услуги этим занимаются? Любят ли они свое дело? Доставляет ли им их занятость радость и удовлетворение?
+    //begin works-gallery__list
+    .works-gallery__list
+      +works-gallery__item('01', 'Чистка зубов')
+      +works-gallery__item('02', 'Установка брекет-системы')
+      +works-gallery__item('03', 'Установка брекет-системы')
+      +works-gallery__item('01', 'Чистка зубов')
+      +works-gallery__item('02', 'Установка брекет-системы')
+      +works-gallery__item('03', 'Установка брекет-системы')
+    //end works-gallery__list
+
+//end works-gallery

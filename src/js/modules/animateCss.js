@@ -3,8 +3,8 @@ module.exports = function() {
   // begin Animate CSS + WayPoints javaScript Plugin
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
 
-  $(".services__item").waypoint(function() {
-    $(this).addClass("animated zoomInUp");
+  $(".works-gallery__item").waypoint(function() {
+    $(this).addClass("animated bounceInUp");
   }, {
     offset: "100%"
   });
