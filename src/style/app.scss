@@ -5,7 +5,7 @@
 @import 'core/base';
 
 //elements
-//@import 'elements/breadcrumbs';
+@import 'elements/breadcrumbs';
 //@import 'elements/burger';
 //@import 'elements/pagination';
 //@import 'elements/popup';
@@ -23,6 +23,8 @@
 @import 'sections/news-sec';
 @import 'sections/banner';
 @import 'sections/adresses';
+@import 'sections/page-title';
 
 //pages
 @import 'pages/index';
+@import 'pages/contacts';

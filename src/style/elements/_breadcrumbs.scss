@@ -1,5 +1,6 @@
 .breadcrumbs__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -7,27 +8,38 @@
 
 .breadcrumbs__item {
   position: relative;
+  padding-right: 30px;
   list-style: none;
   &::after {
-    font-size: 12px;
-    margin: 0 3px 0 4px;
-    content: '/';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 9px;
+    height: 9px;
+    margin: auto;
+    content: '';
+    border: 1px solid #7476a8;
+    border-radius: 50%;
   }
   &:last-child {
+    padding-right: 0;
+    &::after {
+      display: none;
+    }
     .breadcrumbs__link {
       text-decoration: none;
       pointer-events: none;
-    }
-    &::after {
-      display: none;
     }
   }
 }
 
 .breadcrumbs__link {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   white-space: nowrap;
-  color: #403549;
+  text-decoration: underline;
+  color: #434978;
   &:hover {
     text-decoration: none;
   }

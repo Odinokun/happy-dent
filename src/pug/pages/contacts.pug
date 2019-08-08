@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+  - var title       = 'Контакты | Колпино Дент'
+  - var description = 'Контакты | Колпино Дент'
+  - var ogtitle     = 'Контакты | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Контакты'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.contacts
+      include ../sections/page-title
+      include ../sections/contacts-adresses
+      include ../sections/appointment
+    //end content
+
+    include ../sections/footer
