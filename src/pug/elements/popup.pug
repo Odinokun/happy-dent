@@ -1,34 +1,48 @@
-//begin popup
-.popup__layer
+.popup__layer#popup__layer
 
-//begin work-popup
-.popup.work-popup
+//begin popup
+.popup#popup-01
   .popup__close
     +svg('close')
-  .work-popup__body
-    //begin work-popup__slider
-    .work-popup__slider
-      .work-popup__slide
-        img(src="assets/img/work-popup-slide-01.jpg" alt="picture")
-      .work-popup__slide
-        img(src="assets/img/work-popup-slide-02.jpg" alt="picture")
-      .work-popup__slide
-        img(src="assets/img/work-popup-slide-03.jpg" alt="picture")
-    //end work-popup__slider
+  h3.popup__title Записали вас на прием!
+  .popup__text
+    span
+      |Ждем Вас
+      =' '
+      strong 29.07.2019
+      =' '
+      |в
+      =' '
+      strong 12:00
+      br
+      |в клинике по адресу
+      =' '
+      strong Онежская ул. д.1
+    span Мы свяжемся с вами, чтобы подтвердить запись.
+  button.btn
+    span Хорошо
+//end popup
 
-    //begin work-popup__info
-    .work-popup__info
-      h3.work-popup__title Установка брекет-системы
-      p В современном мире огромное количество профессий и областей реализации человека! Живя в мегаполисе, на каждом углу встречаешь ту или иную услугу, массу предложений , которые просто убеждают тебя воспользоваться всем этим ! К сожалению, здесь количество не всегда означает качество, так как здесь более значимый аспект это тот, что определяет почему люди оказывающие какие-либо услуги этим занимаются? Любят ли они свое дело? Доставляет ли им их занятость радость и удовлетворение?
-      span.work-popup__whoes Процедуру проводил:
-      .work-popup__doc
-        .work-popup__doc-ava
-          img(src="assets/img/team-ava-02.jpg" alt="picture")
-        h4.work-popup__doc-name
-          | Курушкин
-          br
-          | Андрей Андреевич
-    //end work-popup__info
-//end work-popup
+//begin popup
+.popup#popup-02
+  .popup__close
+    +svg('close')
+  h3.popup__title Благодарим за обращение!
+  .popup__text
+    span Мы свяжемся с вами в течение пяти минут!
+  button.btn.btn-close
+    span Хорошо
+//end popup
 
+//begin popup
+.popup#popup-03
+  .popup__close
+    +svg('close')
+  h3.popup__title Записаться на прием
+  form.popup__form
+    input.popup__input(placeholder='Ваше имя')
+    input.popup__input.phone-mask(placeholder="+7(___)___-__-__")
+  .btn.open-popup-02
+    input(type="submit")
+    span Записаться
 //end popup

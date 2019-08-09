@@ -40,3 +40,19 @@ $('.start-form').on('click', function (e) {
   $('#form-01').fadeOut(0);
   $('#form-02').fadeIn(0).addClass('active');
 });
+
+
+$('.popup-open').on('click', function () {
+  $('#popup__layer').fadeIn();
+  $('#popup-03').fadeIn();
+});
+
+$('.open-popup-02').on('click', function () {
+  $('#popup-03').fadeOut();
+  $('#popup-02').fadeIn();
+});
+
+
+$('#popup__layer, .popup__close, .btn-close').on('click', function () {
+  $('#popup__layer, .popup').fadeOut();
+});

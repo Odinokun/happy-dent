@@ -14,19 +14,4 @@ module.exports = function() {
   });
   // end work-popup
 
-  // begin work-popup
-  // $('.work-popup-open').on('click', function() {
-  //   $('.work-popup, .popup__layer').fadeIn();
-  //   $('body').addClass('no-scroll');
-  // });
-  // end work-popup
-
-  // begin popup close
-  // $('.popup__layer, .popup__close').on('click', function() {
-  //   $('.work-popup').removeClass('active');
-  //   $('.popup__layer').fadeOut();
-  //   $('body').removeClass('no-scroll');
-  // });
-  // end popup close
-
 };
