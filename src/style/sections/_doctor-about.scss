@@ -1,0 +1,96 @@
+.doctor-about {
+  padding-top: 27px;
+  padding-bottom: 40px;
+  .container {
+    display: flex;
+    max-width: 1070px;
+
+    @include max(767) {
+      display: block;
+    }
+  }
+}
+
+.doctor-about__ava {
+  overflow: hidden;
+  flex: none;
+  width: 280px;
+  height: 280px;
+  margin-top: 15px;
+  margin-right: 30px;
+  border-radius: 50%;
+
+  @include max(910) {
+    width: 220px;
+    height: 220px;
+  }
+  @include max(767) {
+    float: left;
+    margin-top: 10px;
+  }
+  @include max(600) {
+    width: 180px;
+    height: 180px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.doctor-about__info {
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: #272727;
+  }
+}
+
+.doctor-about__name {
+  font-family: $font-b;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2f3150;
+
+  @include max(600) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  @include max(425) {
+    font-size: 26px;
+  }
+}
+
+.doctor-about__subtitle {
+  font-family: $font-b;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #272727;
+}
+
+.doctor-about__list {
+  margin: 0;
+  padding: 0;
+  li {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 6px;
+    padding: 0 0 0 15px;
+    list-style: none;
+    color: #272727;
+    &::before {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+      background-color: #925590;
+    }
+  }
+}

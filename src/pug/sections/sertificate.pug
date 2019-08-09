@@ -1,0 +1,17 @@
+mixin sertificate-slide(pic, name, surname, position)
+  //begin sertificate-slide
+  .sertificate-slide
+    a(href="assets/img/sertificate.jpg" data-fancybox='sertificates').sertificate-slide__link
+      img(src="assets/img/sertificate.jpg" alt="picture")
+  //end sertificate-slide
+
+//begin sertificate
+.sertificate
+  .container
+    h2.section-title Сертификаты
+    .sertificate-slider#sertificate-slider
+      +sertificate-slide
+      +sertificate-slide
+      +sertificate-slide
+      +sertificate-slide
+//end sertificate

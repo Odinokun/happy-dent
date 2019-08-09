@@ -1,0 +1,34 @@
+.doctor {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -110px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg.jpg');
+    background-position: 50% 0;
+  }
+}
+
+.doctor-video {
+  position: relative;
+  padding-top: 40px;
+  iframe {
+    display: block;
+    width: 100%;
+    height: 467px;
+
+    @include max(767) {
+      height: 350px;
+    }
+    @include max(600) {
+      height: 280px;
+    }
+    @include max(425) {
+      height: 200px;
+    }
+  }
+}

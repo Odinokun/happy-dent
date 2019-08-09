@@ -57,6 +57,32 @@ module.exports = function() {
     cssEase: 'linear'
   });
 
+  $('#sertificate-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: true,
+    arrows:true,
+    infinite: true,
+    speed: 500,
+    fade: false,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   // end Slick slider
 
 };
