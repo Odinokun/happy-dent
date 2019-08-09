@@ -1,0 +1,50 @@
+.services {
+  position: relative;
+  padding-bottom: 25px;
+  &::before {
+    position: absolute;
+    top: -110px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg.jpg');
+    background-position: 50% 0;
+  }
+  &::after {
+    position: absolute;
+    top: -165px;
+    right: 0;
+    width: 100%;
+    max-width: 1272px;
+    height: 741px;
+    content: '';
+    background-image: url('../img/bg-services.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .services-sec {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.services-descr {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.services-descr__text {
+  max-width: 925px;
+  margin: 0 auto;
+  padding-top: 8px;
+  p {
+    font-size: 15px;
+    line-height: 22px;
+    color: #272727;
+  }
+}
