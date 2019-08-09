@@ -1,0 +1,41 @@
+extends ../_template
+
+mixin doctors__item(pic, name, surname, position)
+  //begin doctors__item
+  a(href="#").doctors__item
+    .doctors__ava
+      img(src="assets/img/team-ava-" + pic + ".jpg" alt="picture")
+    h3.doctors__title
+      |#{name}
+      br
+      |#{surname}
+    h4.doctors__position #{position}
+  //end doctors__item
+
+block variables
+  - var title       = 'Наши Специалисты | Колпино Дент'
+  - var description = 'Наши Специалисты | Колпино Дент'
+  - var ogtitle     = 'Наши Специалисты | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Наши Специалисты'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.doctors
+      include ../sections/page-title
+      .container
+        .doctors__text
+          p В современном мире огромное количество профессий и областей областей реализации человека! Живя в мегаполисе, на каждом углу встречаешь ту или иную услугу, массу предложений , которые просто убеждают тебя воспользоваться всем этим ! К сожалению, здесь количество не всегда означает качество, так как здесь более значимый аспект это тот, что определяет почему люди оказывающие какие-либо услуги этим занимаются? Любят ли они свое дело? Доставляет ли им их занятость радость и удовлетворение?
+        .doctors__list
+          +doctors__item('01', 'Шурховецкий', 'Иван Викторович',      'врач стоматолог, ортопед, терапевт, хирург')
+          +doctors__item('02', 'Курушкин',    'Андрей Андреевич',     'главный врач, имплантолог, ортопед')
+          +doctors__item('03', 'Лебедев',     'Александр Михайлович', 'врач стоматолог')
+          +doctors__item('04', 'Оперманас',   'Анна Сергеевна',       'врач-стоматолог, терапевт')
+          +doctors__item('05', 'Филипова',    'Нина Юрьевна',         'главный врач, имплантолог, ортопед')
+          +doctors__item('06', 'Знаюненко',   'Александра Игоревна',  'врач ортодонт')
+    //end content
+
+    include ../sections/footer
