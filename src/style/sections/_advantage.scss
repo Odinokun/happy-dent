@@ -1,0 +1,137 @@
+
+.advantage {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.advantage__list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+
+  @include max(1020) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @include max(767) {
+    justify-content: center;
+  }
+}
+
+.advantage__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 0 7px;
+
+  @include max(1020) {
+    width: 45%;
+  }
+  @include max(767) {
+    width: 100%;
+    max-width: 350px;
+  }
+  &::before {
+    font-family: $font-b;
+    font-size: 220px;
+    font-style: italic;
+    line-height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    opacity: .2;
+    color: #434978;
+  }
+  &:nth-child(1)::before {
+    content: '1';
+  }
+  &:nth-child(2)::before {
+    content: '2';
+  }
+  &:nth-child(3)::before {
+    content: '3';
+  }
+}
+
+.advantage__item:nth-child(1),
+.advantage__item:nth-child(3) {
+  transform: translateY(-50px);
+
+  @include max(1020) {
+    transform: translateY(0);
+  }
+}
+
+.advantage__icon {
+  flex: none;
+  margin-right: 25px;
+  svg {
+    fill: #2f3150;
+  }
+}
+
+.advantage__icon--marker svg {
+  width: 64px;
+  height: 63px;
+}
+
+.advantage__icon--doc svg {
+  width: 64px;
+  height: 82px;
+}
+
+.advantage__icon--pig svg {
+  width: 65px;
+  height: 64px;
+}
+
+.advantage__title {
+  font-family: $font-b;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #434978;
+}
+
+.advantage__text {
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+  color: #262626;
+}
+
+.advantage__more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    .advantage__more-text {
+      text-decoration: underline;
+    }
+  }
+}
+
+.advantage__more-text {
+  font-size: 17px;
+  color: #2f3150;
+}
+
+.advantage__more-arrow {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  margin-left: 35px;
+  border-radius: 50%;
+  background-color: #f6f1f6;
+  background-image: url('../img/arr-right.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 15px 15px;
+  box-shadow: 0 6px 5px rgba(47, 49, 80, .16);
+}

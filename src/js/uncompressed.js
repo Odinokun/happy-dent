@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'contacts',
     'works',
     'doctors',
-    'doctor'
+    'doctor',
+    'services'
     ]);
 });
 
