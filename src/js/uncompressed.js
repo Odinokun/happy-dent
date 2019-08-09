@@ -7,7 +7,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'contacts',
-    'works'
+    'works',
+    'doctors'
     ]);
 });
 
