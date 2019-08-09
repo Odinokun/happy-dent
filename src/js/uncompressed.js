@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'works',
     'doctors',
     'doctor',
-    'services'
+    'services',
+    'service'
     ]);
 });
 
@@ -33,3 +34,9 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+$('.start-form').on('click', function (e) {
+  e.preventDefault();
+
+  $('#form-01').fadeOut(0);
+  $('#form-02').fadeIn(0).addClass('active');
+});

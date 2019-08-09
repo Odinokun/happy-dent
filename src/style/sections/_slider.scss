@@ -1,4 +1,6 @@
 .slider {
+  position: relative;
+  z-index: 1;
   &.slick-dotted.slick-slider {
     margin-bottom: 0;
   }

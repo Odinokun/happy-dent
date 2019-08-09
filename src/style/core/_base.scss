@@ -145,7 +145,6 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-
   &.no-scroll {
     overflow: hidden;
   }
@@ -238,6 +237,7 @@ ol > *:not(li) {
   }
   span,
   svg {
+    font-family: $font-m;
     position: relative;
     z-index: 2;
     fill: #fff;
@@ -255,6 +255,29 @@ ol > *:not(li) {
   }
   &::after {
     background-color: #7476a8;
+  }
+}
+
+.btn-light {
+  background-color: #434978;
+  border-color: #434978;
+  span {
+    color: #434978;
+  }
+  &::before {
+    background-color: #fff;
+  }
+  &::after {
+    background-color: #434978;
+  }
+  &:hover {
+    border-color: #434978;
+    span {
+      color: #fff;
+    }
+    &::after {
+      background-color: #434978;
+    }
   }
 }
 
