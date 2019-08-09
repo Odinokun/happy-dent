@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'contacts',
     'works',
-    'doctors'
+    'doctors',
+    'doctor'
     ]);
 });
 

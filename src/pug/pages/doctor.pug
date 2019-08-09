@@ -1,0 +1,35 @@
+extends ../_template
+
+mixin doctors__item(pic, name, surname, position)
+  //begin doctors__item
+  a(href="#").doctors__item
+    .doctors__ava
+      img(src="assets/img/team-ava-" + pic + ".jpg" alt="picture")
+    h3.doctors__title
+      |#{name}
+      br
+      |#{surname}
+    h4.doctors__position #{position}
+  //end doctors__item
+
+block variables
+  - var title       = 'Наши Специалисты | Колпино Дент'
+  - var description = 'Наши Специалисты | Колпино Дент'
+  - var ogtitle     = 'Наши Специалисты | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Наши Специалисты'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.doctor
+      .doctor-video
+        .container
+          iframe(src="https://www.youtube.com/embed/1n6R3_V7REE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+      include ../sections/doctor-about
+    //end content
+
+    include ../sections/footer
