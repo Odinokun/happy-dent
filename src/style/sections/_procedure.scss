@@ -1,0 +1,21 @@
+.procedure {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 45px;
+
+    @include max(600) {
+      font-size: 30px;
+    }
+    @include max(425) {
+      font-size: 26px;
+    }
+  }
+  .works-gallery__list {
+    @include max(767) {
+      justify-content: space-around;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+mixin works-gallery__item(pic, title)
+  .works-gallery__item.work-popup-open
+    .works-gallery__pic
+      img(src="assets/img/works-gallery-" + pic + ".jpg" alt="picture")
+    h4.works-gallery__title #{title}
+
+//begin procedure
+.procedure
+  .container
+    h2.section-title Выполненные процедуры
+
+    //begin works-gallery__list
+    .works-gallery__list
+      +works-gallery__item('01', 'Чистка зубов')
+      +works-gallery__item('02', 'Установка брекет-системы')
+      +works-gallery__item('03', 'Установка брекет-системы')
+    //end works-gallery__list
+//end procedure
