@@ -7,7 +7,6 @@
 //elements
 @import 'elements/breadcrumbs';
 //@import 'elements/burger';
-//@import 'elements/pagination';
 @import 'elements/work-popup';
 @import 'elements/popup';
 @import 'elements/slickBase';
@@ -30,6 +29,7 @@
 @import 'sections/sertificate';
 @import 'sections/procedure';
 @import 'sections/advantage';
+@import 'sections/service-form';
 
 //pages
 @import 'pages/index';
@@ -38,3 +38,4 @@
 @import 'pages/doctors';
 @import 'pages/doctor';
 @import 'pages/services';
+@import 'pages/service';

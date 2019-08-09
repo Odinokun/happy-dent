@@ -1,0 +1,37 @@
+extends ../_template
+
+mixin doctors__item(pic, name, surname, position)
+  //begin doctors__item
+  a(href="#").doctors__item
+    .doctors__ava
+      img(src="assets/img/team-ava-" + pic + ".jpg" alt="picture")
+    h3.doctors__title
+      |#{name}
+      br
+      |#{surname}
+    h4.doctors__position #{position}
+  //end doctors__item
+
+block variables
+  - var title       = 'Удаление зубов | Колпино Дент'
+  - var description = 'Удаление зубов | Колпино Дент'
+  - var ogtitle     = 'Удаление зубов | Колпино Дент'
+  - var ogimage     = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Удаление зубов'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.service
+      include ../sections/page-title
+      include ../sections/service-text
+      include ../sections/banner
+      include ../sections/service-text
+      include ../sections/slider
+      include ../sections/team
+      include ../sections/service-form
+    //end content
+
+    include ../sections/footer
