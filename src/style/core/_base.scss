@@ -187,9 +187,9 @@ ol > *:not(li) {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  border: 2px solid #87b365;
+  border: 2px solid $highlight-g;
   border-radius: 20px !important;
-  background-color: #87b365;
+  background-color: $highlight-g;
 
   input {
     position: absolute;
@@ -208,7 +208,7 @@ ol > *:not(li) {
     left: 0;
     margin: auto;
     content: '';
-    background-color: #87b365;
+    background-color: $highlight-g;
   }
 
   &:after {
