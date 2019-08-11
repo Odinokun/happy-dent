@@ -22,7 +22,7 @@
       margin: 0 15px;
       transition: background-color .5s;
       border-radius: 50%;
-      background-color: #434978;
+      background-color: $highlight-v;
       &:hover,
       &.slick-active {
         background-color: #7476a8;

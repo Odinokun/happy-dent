@@ -16,9 +16,12 @@
   width: 100%;
   max-width: 706px;
   margin-top: 10px;
-  margin-right: 160px;@include max(1180) {
+  margin-right: 160px;
+
+  @include max(1180) {
     margin-right: 70px;
-  }@include max(1020) {
+  }
+  @include max(1020) {
     margin-right: 0;
   }
 
@@ -32,15 +35,19 @@
     transform: translate(-370px, -373px);
     border: 123px solid #fbfbfb;
     border-radius: 50%;
-    background-color: #f1f1f3;@include max(910) {
+    background-color: #f1f1f3;
+
+    @include max(910) {
       transform: translate(-270px, -380px);
-    }@include max(767) {
+    }
+    @include max(767) {
       left: 50%;
       width: 550px;
       height: 550px;
       transform: translate(-50%, -50%);
       border: none;
-    }@include max(600) {
+    }
+    @include max(600) {
       display: none;
     }
   }
@@ -55,7 +62,9 @@
   padding: 31px 63px 25px 63px;
   border-radius: $radius;
   background-color: #f5f5fa;
-  box-shadow: 0 8px 26px rgba(94, 96, 152, .27);@include max(425) {
+  box-shadow: 0 8px 26px rgba(94, 96, 152, .27);
+
+  @include max(425) {
     padding: 31px 31px 25px 31px;
   }
 
@@ -69,12 +78,15 @@
     background-image: url('../img/appointment-girl.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;@include max(910) {
+    background-size: contain;
+
+    @include max(910) {
       top: 63px;
       left: -40px;
       width: 250px;
       height: 337px;
-    }@include max(767) {
+    }
+    @include max(767) {
       display: none;
     }
   }
@@ -84,7 +96,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 417px;@include max(767) {
+  max-width: 417px;
+
+  @include max(767) {
     max-width: 100%;
   }
 
@@ -99,7 +113,9 @@
 }
 
 .ui-selectmenu-button.ui-button {
-  margin-bottom: 30px;@include max(600) {
+  margin-bottom: 30px;
+
+  @include max(600) {
     margin-bottom: 15px;
   }
 }
@@ -114,11 +130,17 @@
   margin-bottom: 30px;
   padding: 0 17px;
   color: #3d3d3d;
-  border: 1px solid #434978;
+  border: 1px solid #e2e2f3;
   border-radius: 15px !important;
-  background-color: #fcf9fd;@include placeholder-color(#3d3d3d);@include max(600) {
+  background-color: #fcf9fd;
+
+  @include placeholder-color(#3d3d3d);
+  @include max(600) {
     width: 100%;
     margin-bottom: 15px;
+  }
+  &:focus {
+    border: 1px solid $highlight-v;
   }
 }
 
@@ -127,7 +149,9 @@
   display: flex;
   align-items: center;
   margin-top: -7px;
-  margin-bottom: 15px;@include max(600) {
+  margin-bottom: 15px;
+
+  @include max(600) {
     margin-top: 0;
   }
 
@@ -162,7 +186,7 @@
   margin-right: 15px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #434978;
+  background-color: $highlight-v;
 }
 
 .appointment-form__agree-text {

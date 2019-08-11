@@ -42,7 +42,7 @@
     bottom: 0;
     left: -30px;
     opacity: .2;
-    color: #434978;
+    color: $highlight-v;
   }
   &:nth-child(1)::before {
     content: '1';
@@ -91,7 +91,7 @@
   font-family: $font-b;
   font-size: 18px;
   margin-bottom: 15px;
-  color: #434978;
+  color: $highlight-v;
 }
 
 .advantage__text {
@@ -110,6 +110,10 @@
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+
+  @include max(767) {
+    text-decoration: underline;
+  }
   &:hover {
     .advantage__more-text {
       text-decoration: underline;
@@ -134,4 +138,8 @@
   background-position: 50% 50%;
   background-size: 15px 15px;
   box-shadow: 0 6px 5px rgba(47, 49, 80, .16);
+
+  @include max(767) {
+    display: none;
+  }
 }

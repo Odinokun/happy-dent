@@ -68,7 +68,6 @@
   @include max(910) {
     width: 40%;
   }
-
   @include max(600) {
     display: none;
   }
@@ -83,11 +82,13 @@
 .slide__info {
   width: 50%;
   padding: 33px 0 50px 0;
+  transition: transform .65s cubic-bezier(.68, -.55, .265, 1.55) .5s, opacity .3s;
+  transform: translateY(100%);
+  opacity: 0;
 
   @include max(910) {
     width: 60%;
   }
-
   @include max(600) {
     width: 100%;
     text-align: center;
@@ -98,14 +99,11 @@
   font-family: $font-b;
   font-size: 30px;
   margin-bottom: 8px;
-  transition: transform .65s cubic-bezier(.68, -.55, .265, 1.55) .5s, opacity .3s;
-  opacity: 0;
   color: #fff;
 
   @include max(600) {
     font-size: 24px;
   }
-
   @include max(425) {
     font-size: 22px;
   }
@@ -115,15 +113,12 @@
   font-family: $font-b;
   font-size: 36px;
   margin-bottom: 12px;
-  transition: transform .65s cubic-bezier(.68, -.55, .265, 1.55) .8s, opacity .3s;
   text-transform: uppercase;
-  opacity: 0;
   color: #fff;
 
   @include max(600) {
     font-size: 30px;
   }
-
   @include max(425) {
     font-size: 26px;
   }
@@ -133,14 +128,11 @@
   font-size: 21px;
   line-height: 24px;
   margin-bottom: 15px;
-  transition: transform .65s cubic-bezier(.68, -.55, .265, 1.55) 1s, opacity .3s;
-  opacity: 0;
   color: #fff;
 
   @include max(600) {
     font-size: 18px;
   }
-
   @include max(425) {
     font-size: 16px;
   }
@@ -149,9 +141,7 @@
 .slide__link {
   font-size: 18px;
   display: block;
-  transition: transform .65s cubic-bezier(.68, -.55, .265, 1.55) 1.2s, opacity .3s;
   text-decoration: underline;
-  opacity: 0;
   color: #fff;
 }
 
@@ -194,31 +184,10 @@
 //text
 .slide {
   &.slick-active {
-    .slide__subtitle,
-    .slide__title,
-    .slide__text,
-    .slide__link {
-      transform: translateX(0);
+    .slide__info {
+      transform: translateY(0);
       opacity: 1;
     }
-  }
-}
-
-.slide--right {
-  .slide__subtitle,
-  .slide__title,
-  .slide__text,
-  .slide__link {
-    transform: translateX(-100vw);
-  }
-}
-
-.slide--left {
-  .slide__subtitle,
-  .slide__title,
-  .slide__text,
-  .slide__link {
-    transform: translateX(100vw);
   }
 }
 

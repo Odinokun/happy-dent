@@ -33,6 +33,10 @@
   }
 }
 
+.popup-03 {
+  max-width: 350px;
+}
+
 .popup__close {
   position: absolute;
   z-index: 1;
@@ -63,7 +67,7 @@
   font-family: $font-b;
   font-size: 24px;
   margin-bottom: 25px;
-  color: #434978;
+  color: $highlight-v;
 }
 
 .popup__text {
@@ -79,6 +83,7 @@
 .popup__form {
   margin-bottom: 5px;
 }
+
 .popup__input {
   font-size: 15px;
   line-height: 30px;
@@ -87,9 +92,12 @@
   margin-bottom: 15px;
   padding: 0 17px;
   color: #3d3d3d;
-  border: 1px solid #434978;
+  border: 1px solid #e2e2f3;
   border-radius: 15px !important;
   background-color: #fcf9fd;
 
   @include placeholder-color(#3d3d3d);
+  &:focus {
+    border: 1px solid $highlight-v;
+  }
 }

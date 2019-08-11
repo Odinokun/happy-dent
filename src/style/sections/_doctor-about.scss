@@ -29,8 +29,10 @@
     margin-top: 10px;
   }
   @include max(600) {
+    float: none;
     width: 180px;
     height: 180px;
+    margin: 0 auto 10px;
   }
   img {
     display: block;
@@ -45,6 +47,10 @@
     line-height: 22px;
     margin-bottom: 25px;
     color: #272727;
+
+    @include max(600) {
+      text-align: center;
+    }
   }
 }
 
@@ -57,6 +63,7 @@
   @include max(600) {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
   }
   @include max(425) {
     font-size: 26px;
@@ -68,6 +75,10 @@
   font-size: 16px;
   margin-bottom: 20px;
   color: #272727;
+
+  @include max(600) {
+    text-align: center;
+  }
 }
 
 .doctor-about__list {

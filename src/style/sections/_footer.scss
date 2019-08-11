@@ -44,7 +44,7 @@
   background-color: #f5f5fa;
 
   @include max(910) {
-    background-color: #434978;
+    background-color: $highlight-v;
   }
 
   .container {
@@ -110,7 +110,7 @@
   margin-top: -3px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #434978;
+  color: $highlight-v;
 }
 
 .footer-menu__list {
@@ -171,7 +171,7 @@
   flex: none;
   margin-right: 26px;
   svg {
-    fill: #434978;
+    fill: $highlight-v;
     transition: fill .5s;
     &:hover {
       fill: #7476a8;
