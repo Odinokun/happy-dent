@@ -1,0 +1,279 @@
+.menu {
+  @include max(1020) {
+    position: fixed;
+    top: 52px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    margin: auto;
+    padding: 20px 0;
+    background-color: #fff;
+  }
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @include max(1020) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.menu__item {
+  position: relative;
+  padding: 0 55px 0 0;
+  list-style: none;
+
+  @include max(1020) {
+    width: 100%;
+    padding-right: 0;
+    transition: .5s;
+    background-color: #fff;
+  }
+  &:last-child {
+    padding-right: 0;
+    &::before {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 27px;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    margin: auto;
+    content: '';
+    opacity: .2;
+    background-color: #864c84;
+
+    @include max(1020) {
+      display: none;
+    }
+  }
+}
+
+.menu__link {
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #2f3150;
+
+  @include max(1020) {
+    padding: 5px 0 5px 30px;
+  }
+  &.active {
+    &::before {
+      width: 60%;
+    }
+  }
+  &:hover {
+    color: #7476a8;
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    transition: width .5s;
+    background-color: #bcd9a5;
+
+    @include max(1020) {
+      display: none;
+    }
+  }
+}
+
+.menu__link-btn,
+.menu__sublink-btn {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  display: none;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+
+  @include max(1020) {
+    display: block;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    content: '';
+    transition: .5s;
+    background-color: $brand;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 1021px) {
+  .menu__item {
+    &:hover {
+      & > .menu__sublist-wrap {
+        pointer-events: auto;
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu__subitem {
+    &:hover {
+      & > .menu__sub-sublist-wrap {
+        pointer-events: auto;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.menu__item.active {
+  @include max(1020) {
+    background-color: #434978;
+    .menu__link {
+      color: #fff;
+    }
+
+    & > .menu__link-btn {
+      &::before {
+        background-color: transparent;
+      }
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.menu__subitem.active {
+  @include max(1020) {
+    background-color: #434978;
+    .menu__sublink {
+      color: #fff;
+    }
+
+    & > .menu__sublink-btn {
+      &::before {
+        background-color: transparent;
+      }
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.menu__sublist-wrap,
+.menu__sub-sublist-wrap {
+  position: absolute;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.menu__sublist-wrap {
+  top: 100%;
+  left: 0;
+  padding-top: 20px;
+
+  @include max(1020) {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    padding-top: 0;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.menu__sub-sublist-wrap {
+  top: 0;
+  left: 100%;
+  padding-left: 40px;
+
+  @include max(1020) {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    padding-top: 0;
+    padding-left: 0;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.menu__sublist,
+.menu__sub-sublist {
+  width: 160px;
+  margin: 0;
+  padding: 25px 30px;
+  border-radius: 12px;
+  background-color: #f5f5fa;
+  box-shadow: 0 3px 7px rgba(70, 76, 122, .2);
+
+  @include max(1020) {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: #f9f9f9;
+    box-shadow: none;
+  }
+}
+
+.menu__subitem,
+.menu__sub-subitem {
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  @include max(1020) {
+    transition: .5s;
+    background-color: #f9f9f9;
+  }
+}
+
+.menu__sublink,
+.menu__sub-sublink {
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 5px 0;
+  transition: color .5s;
+  text-decoration: none;
+  color: #2f3150;
+  &:hover {
+    color: #9ea0c1;
+  }
+}
+
+.menu__sublink {
+  @include max(1020) {
+    padding: 8px 0 8px 60px;
+  }
+}
+
+.menu__sub-sublink {
+  @include max(1020) {
+    padding: 8px 0 8px 90px;
+  }
+}
