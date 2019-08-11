@@ -135,6 +135,12 @@
 .work-popup__doc {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  &:hover {
+    .work-popup__doc-name {
+      color: $highlight-v;
+    }
+  }
 }
 
 .work-popup__doc-ava {
@@ -154,5 +160,6 @@
   font-family: $font-b;
   font-size: 14px;
   line-height: 19px;
+  transition: color .5s;
   color: #272727;
 }

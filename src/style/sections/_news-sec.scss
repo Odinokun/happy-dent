@@ -6,7 +6,6 @@
     @include max(1020) {
       flex-wrap: wrap;
     }
-
     @include max(767) {
       padding-top: 30px;
     }
@@ -44,7 +43,6 @@
   @include max(767) {
     width: calc(33.33% - 10px);
   }
-
   @include max(600) {
     width: 100%;
   }
@@ -116,6 +114,15 @@
   @include max(600) {
     justify-content: center;
   }
+  &:hover {
+    svg {
+      fill: $highlight-v;
+    }
+    span {
+      text-decoration: none;
+      color: $highlight-v;
+    }
+  }
 
   svg {
     flex: none;
@@ -127,13 +134,9 @@
   }
   span {
     font-size: 15px;
+    transition: color .5s;
     text-decoration: underline;
     color: #7476a8;
-  }
-  &:hover {
-    span {
-      text-decoration: none;
-    }
   }
 }
 
@@ -164,11 +167,9 @@
     width: calc(33.33% - 23px);
     margin-bottom: 30px;
   }
-
   @include max(767) {
     width: calc(33.33% - 10px);
   }
-
   @include max(600) {
     width: 100%;
   }
@@ -182,7 +183,15 @@
   @include max(600) {
     justify-content: center;
   }
-
+  &:hover {
+    svg {
+      fill: $highlight-v;
+    }
+    span {
+      text-decoration: none;
+      color: $highlight-v;
+    }
+  }
   svg {
     fill: #474a79;
     width: 35px;
@@ -192,12 +201,8 @@
   }
   span {
     font-size: 15px;
+    transition: color .5s;
     text-decoration: underline;
     color: #7476a8;
-  }
-  &:hover {
-    span {
-      text-decoration: none;
-    }
   }
 }

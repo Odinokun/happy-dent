@@ -4,7 +4,7 @@ module.exports = function() {
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
 
   $(".works-gallery__item").waypoint(function() {
-    $(this).addClass("animated bounceInUp");
+    $(this).addClass("animated fadeInUp");
   }, {
     offset: "100%"
   });

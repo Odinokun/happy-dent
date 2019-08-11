@@ -27,19 +27,17 @@
     pointer-events: none;
     opacity: .02;
     border-radius: 50%;
-    background-color: #434978;
+    background-color: $highlight-v;
 
     @include max(1440) {
       width: 500px;
       height: 500px;
       transform: translate(90px, -95px);
     }
-
     @include max(910) {
       right: 50%;
       transform: translate(50%, -95px);
     }
-
     @include max(600) {
       display: none;
     }
@@ -65,6 +63,10 @@
   flex-wrap: wrap;
   padding-top: 20px;
   padding-right: 40px;
+
+  @include max(600) {
+    flex-direction: column;
+  }
 }
 
 .about-sec__footer-link {
@@ -73,12 +75,24 @@
   margin-bottom: 15px;
   padding-right: 10px;
   white-space: nowrap;
+  &:hover {
+    svg {
+      fill: $highlight-v;
+    }
+    span {
+      color: $highlight-v;
+    }
+  }
   svg {
     flex: none;
     fill: #7476a8;
     width: 36px;
     height: 36px;
     margin-right: 15px;
+    transition: fill .5s;
+  }
+  span {
+    transition: color .5s;
   }
 }
 
